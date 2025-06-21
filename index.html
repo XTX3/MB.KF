@@ -1,23 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Musab Khalaf - X</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>XIX - Musab Khalaf Portfolio</title>
+
+  <!-- وصف الموقع والكلمات المفتاحية واسم المؤلف -->
+  <meta name="description" content="XIX - Official portfolio of Musab Khalaf, web developer and designer." />
+  <meta name="keywords" content="XIX, Musab Khalaf, web developer, portfolio, designer, frontend, website, Musab" />
+  <meta name="author" content="Musab Khalaf" />
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Musab Khalaf - Portfolio" />
-  <meta property="og:description" content="Official portfolio of Musab Khalaf. Web developer & designer." />
+  <meta property="og:title" content="XIX - Musab Khalaf Portfolio" />
+  <meta property="og:description" content="Welcome to XIX – the official portfolio of Musab Khalaf, a creative web developer and designer." />
   <meta property="og:image" content="images/profile.png" />
   <meta property="og:url" content="https://musabkhalaf.github.io/" />
   <meta property="og:type" content="website" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Musab Khalaf - Portfolio" />
-  <meta name="twitter:description" content="Official portfolio of Musab Khalaf. Web developer & designer." />
+  <meta name="twitter:title" content="XIX - Musab Khalaf Portfolio" />
+  <meta name="twitter:description" content="Welcome to XIX – official portfolio of Musab Khalaf." />
   <meta name="twitter:image" content="images/profile.png" />
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 
   <style>
     * {
@@ -29,6 +37,9 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #0f1113;
       color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
@@ -68,6 +79,7 @@
       align-items: center;
       padding: 50px 5%;
       gap: 40px;
+      flex-grow: 1;
     }
 
     .hero-text {
@@ -112,18 +124,30 @@
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
-      margin-top: 10px;
+    }
+
+    .cta-section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      margin-top: 20px;
     }
 
     .social-icons {
-      margin-top: 30px;
+      display: flex;
+      gap: 12px;
     }
 
     .social-icons a {
-      margin-right: 10px;
       font-size: 24px;
-      color: white;
+      color: white !important;
       text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #33aaff !important;
     }
 
     .hero-image {
@@ -141,11 +165,12 @@
       position: relative;
     }
 
+    /* الدائرة الزرقاء الدائرية خلف الصورة */
     .blue-bg {
       position: absolute;
       background-color: #33aaff;
-      width: 100%;
-      height: 100%;
+      width: 350px;
+      height: 350px;
       border-radius: 50%;
       top: 50%;
       left: 50%;
@@ -154,13 +179,31 @@
     }
 
     footer {
+      background-color: #0f1113;
+      padding: 20px 0;
       text-align: center;
-      padding: 20px;
-      color: #777;
+      color: #999;
       font-size: 14px;
+      border-top: 1px solid #222;
     }
 
-    /* Media Queries */
+    footer .social-icons {
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    footer .social-icons a {
+      margin: 0 15px;
+      font-size: 28px;
+      color: white !important;
+      transition: color 0.3s;
+      text-decoration: none;
+    }
+
+    footer .social-icons a:hover {
+      color: #33aaff !important;
+    }
+
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -188,6 +231,10 @@
         width: 300px;
         height: 300px;
       }
+
+      .cta-section {
+        align-items: center;
+      }
     }
 
     @media (max-width: 480px) {
@@ -201,18 +248,15 @@
 
       .cv-btn {
         width: 100%;
-        display: block;
-        margin: 10px auto;
+        text-align: center;
       }
 
       .social-icons {
-        display: flex;
         justify-content: center;
         flex-wrap: wrap;
       }
     }
   </style>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -232,24 +276,33 @@
       <h2>Hello, I'm</h2>
       <h1>Musab<span> Khalaf</span></h1>
       <p>A passionate <span>Web Developer</span> & Designer</p>
-      <a class="cv-btn" >Download CV</a>
 
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
+      <div class="cta-section">
+        <a class="cv-btn" href="#">Download CV</a>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
       </div>
     </div>
 
     <div class="hero-image">
       <div class="blue-bg"></div>
-      <img src="https://i.imgur.com/cNNqUd5.png" alt="Profile">
+      <img src="https://i.imgur.com/cNNqUd5.png" alt="Profile" />
     </div>
   </section>
 
-
+  <footer>
+    <div class="social-icons">
+      <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://facebook.com/yourusername" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com/yourusername" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 Musab Khalaf. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
-
